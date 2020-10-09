@@ -17,19 +17,19 @@ function calculateFahrenheit(tC) {
   return (tC * 9) / 5 + 32;
 }
 
-let tC;
 let tF;
 let admin;
 let name;
 const num = 1000;
 const str = "108";
 
-tC = 0;
 name = "Василий";
 admin = name;
 
+const tC = prompt("Enter a temperature in Celcius");
+
 alert(
-  `'0' degrees in Celcius would be '${calculateFahrenheit(
+  `'${tC}' degrees in Celcius would be '${calculateFahrenheit(
     tC
   )}' degrees in Fahrenheit`
 );
