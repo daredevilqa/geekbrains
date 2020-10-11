@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson2</title>
+  </head>
+  <body>
+    <h2>Tasks #3, #6, #8</h2>
+    <p>Note, operator select only works for Task 6</p>
+    <p>Enter 2 numbers:</p>
+    <input type="number" id="first-num" />
+    <select id="operator">
+      <option value="Sum">+</option>
+      <option value="Deduct">-</option>
+      <option value="Multiply">*</option>
+      <option value="Divide">/</option>
+    </select>
+    <input type="number" id="second-num" />
+    <br /><br />
+    <div>
+      <button id="btn-task3">CALC Task 3</button>
+      <button id="btn-task6">CALC Task 6</button>
+      <button id="btn-task8">CALC Task 8</button>
+    </div>
+    <br />
+    <div>
+      RESULT:
+      <span
+        id="result"
+        style="color: indigo; font-size: 20px; font-weight: bold"
+      ></span>
+    </div>
+
+    <h2>Task #4</h2>
+    <p>Enter a number in range [0..15]</p>
+    <input type="number" id="task4-input" />
+    <br /><br />
+    <div><button id="btn-task4">Execute Task 4</button></div>
+    <br />
+    <div>
+      RESULT:
+      <span
+        id="result-task4"
+        style="color: mediumblue; font-size: 20px; font-weight: bold"
+      ></span>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
