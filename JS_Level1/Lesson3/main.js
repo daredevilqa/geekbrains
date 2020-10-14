@@ -27,8 +27,6 @@ function drawPyramid(rows) {
   }
 }
 
-function countCartTotal() {}
-
 // ! Task 1
 console.log("-------TASK 1-------");
 displaySimpleNumbers(
