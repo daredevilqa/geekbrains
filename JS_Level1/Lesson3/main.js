@@ -42,11 +42,7 @@ const item2 = { name: "Underwear", price: 300 };
 const cart = {
   items: [],
   total: function () {
-    let sum = 0;
-    this.items.forEach((item) => {
-      sum += item.price;
-    });
-    return sum;
+    return this.items.reduce((sum, cur) => sum + cur.price, 0);
   },
 };
 
