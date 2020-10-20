@@ -27,23 +27,44 @@ function numberToObject(num = "") {
   return result;
 }
 
-//! Task 1
+// Task 1
 // Написать функцию, преобразующую число в объект. Передавая на вход число от 0 до infinity, надо получить на выходе объект, в котором в соответствующих свойствах описаны единицы, десятки и сотни. Например, для числа 245 надо получить следующий объект: {‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}.
 
 console.log("-------TASK 1-------");
 console.log(numberToObject(prompt("Enter an integer from 0 to infinity")));
 
-//! Task 2
-// Продолжить работу с интернет-магазином:
-// В прошлом домашнем задании вы реализовали корзину на базе массивов. Какими объектами можно заменить их элементы?
-// Реализуйте такие объекты.
-// Перенести функционал подсчета корзины на объектно-ориентированную базу.
+// Task 2
+// Task 3
 
-// На дополнительный плюс - реализовать класс корзины. Свойство - сама корзина (массив). Методы - подсчет стоимости, добавление товара в корзину.
+console.log("-------TASKS 2 & 3-------");
 
-console.log("-------TASK 2-------");
+const prod1 = new Product("Socks", "Clothes", 100);
+const prod2 = new Product("Underwear", "Clothes", 200);
+const prod3 = new Product("Sneakers", "Shoes", 1000);
+const catalog = new Catalog(prod1, prod2, prod3);
+const cart = new Cart(prod1, prod2, prod3);
 
-//! Task 3
-// Подумать над глобальными сущностями. К примеру, сущность «Продукт» в интернет-магазине актуальна не только для корзины, но и для каталога. Стремиться нужно к тому, чтобы объект «Продукт» имел единую структуру для различных модулей сайта, но в разных местах давал возможность вызывать разные методы.
+console.log("CATALOG:");
+console.log(catalog.items);
+console.log("CART:");
+console.log(cart.items);
+console.log(`Cart's total is: ${cart.getTotal()}`);
 
-console.log("-------TASK 3-------");
+cart.addItem(new Product("Skis", "Sport", 13000));
+
+console.log("The new item has been added to cart:");
+console.log(cart.getItem("Skis"));
+console.log("Now CART is:");
+console.log(cart.items);
+
+console.log(`Cart's total is: ${cart.getTotal()}`);
+
+prod3.discount = 10;
+
+console.log(
+  `Price of ${prod3.name} dropped to ${prod3.price} due to ${prod3.discount}% discount applied`
+);
+console.log(`Cart's total is recalculated as well: ${cart.getTotal()}`);
+
+console.log(`'${prod1.category}' category contains these items:`);
+console.log(catalog.getItemsPerCategory(prod1.category));
