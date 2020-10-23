@@ -160,13 +160,13 @@ img {
   outline: 1px solid royalblue;
 }
 
-img.product {
+.product__img {
   outline: 1px solid royalblue;
   float: left;
   margin: 0 10px 10px 10px;
 }
 
-img.product:hover {
+.product__img:hover {
   outline: none;
 }
 
@@ -180,9 +180,6 @@ img.separator {
   vertical-align: text-bottom;
   padding-left: 10px;
   padding-right: 10px;
-}
-
-.catalog_grid {
 }
 
 .catalog_item {
@@ -240,6 +237,16 @@ img.separator {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  display: inline-block;
+}
+
+.currency {
+  color: royalblue;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 table td {
@@ -300,17 +307,17 @@ input[type="submit"] {
   padding: 5px;
 }
 
-input[type="button"].buy {
+input[type="button"].btn__buy {
   font-size: 24px;
   padding: 5px 30px;
 }
 
-input[type="button"].buy:hover {
+input[type="button"].btn__buy:hover {
   color: mediumvioletred;
   border: 2px solid mediumvioletred;
 }
 
-input[type="button"].buy:active {
+input[type="button"].btn__buy:active {
   background-color: mediumvioletred;
   color: whitesmoke;
   border: 2px solid whitesmoke;
