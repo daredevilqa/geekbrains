@@ -4,27 +4,31 @@ class Catalog extends Cart {
   }
 }
 
+const cart = new Cart();
+const catalog = new Catalog();
+
 const catalogGrid = document.querySelector(".catalog_grid");
 const itemsNodes = catalogGrid.querySelectorAll(".catalog_item");
 
-const catalog = new Catalog();
-const cart = new Cart();
-
 /**
  * Initializes catalog array filling it out with the products presented on the page
- * @param {NodeListOf<Element>} nodesList
+ * @param {NodeListOf<HTMLDivElement>} nodesList
  */
 function initCatalog(nodesList) {
   nodesList.forEach((node) => {
     const name = node.querySelector(".product__name");
     const price = node.querySelector(".product__price");
+    const img = node.querySelector(".product__img");
     /**
      * @type HTMLButtonElement
      */
     const buyBtn = node.querySelector(".btn__buy");
+
     const product = new Product(name.textContent.trim(), price.textContent);
+    product.imgUrl = img.getAttribute("src");
 
     catalog.addItem(product);
+
     buyBtn.addEventListener("click", () => addToCart(product));
   });
 }
@@ -34,9 +38,36 @@ function initCatalog(nodesList) {
  * @param {Product} prod
  */
 function addToCart(prod) {
-  cart.addItem(prod);
+  /**
+   * @type HTMLDivElement
+   */
+  const catalogCartSection = document.querySelector(".catalog__cart_section");
+  /**
+   * @type HTMLSpanElement
+   */
+  const catalogCartCounter = catalogCartSection.querySelector(
+    ".catalog__cart_counter"
+  );
+  const existingItem = cart.getItem(prod.name);
+
+  if (cart.items.length === 0) {
+    catalogCartSection.style.display = "inline-block";
+  }
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.addItem(prod);
+  }
+
+  let currentCount = Number(catalogCartCounter.innerText);
+  catalogCartCounter.innerText = ++currentCount;
+
   console.log("Added to Cart:", prod);
   console.log("Cart now:", cart);
+  console.log("Cart's TOTAL is:", cart.getTotal());
+
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 initCatalog(itemsNodes);

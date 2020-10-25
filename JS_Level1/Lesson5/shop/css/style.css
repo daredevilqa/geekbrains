@@ -3,6 +3,10 @@
   src: url(../fonts/OpenSans.ttf);
 }
 
+.clearfix {
+  clear: both;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   /*        background-image: linear-gradient(to bottom, whitesmoke, dodgerblue, rgb(100, 200, 150));*/
@@ -124,6 +128,18 @@ a.submenu:hover {
   font-weight: 600;
 }
 
+a.catalog__cart_link {
+  color: whitesmoke;
+}
+
+a.catalog__cart_link:hover {
+  color: mediumvioletred;
+  background-color: whitesmoke;
+  padding: 3px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
 p {
   padding-left: 5px;
 }
@@ -133,6 +149,18 @@ h1 {
   background-color: royalblue;
   color: whitesmoke;
   line-height: 50px;
+}
+
+h1.catalog__header {
+  position: relative;
+}
+
+.catalog__cart_section {
+  position: absolute;
+  right: 20px;
+  font-size: 0.6em;
+  font-weight: 400;
+  display: none;
 }
 
 h1.waterworld {
@@ -190,6 +218,23 @@ img.separator {
 .item_row {
   text-align: center;
   padding: 5px;
+}
+
+.cart__item_props {
+  color: #484343;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.cart__total {
+  color: royalblue;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
 }
 
 /* Текст краткого описания товара */
