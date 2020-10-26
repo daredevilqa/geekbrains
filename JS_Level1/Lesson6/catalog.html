@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Water World - Каталог</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/wave_small.png" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header_logo">
+          <a href="index.html">
+            <img class="logo" src="img/paddle-logo.png" alt="logo" />
+          </a>
+        </div>
+
+        <div class="header_column">
+          <h1 class="waterworld">Water World</h1>
+          <h4>Водный Мир</h4>
+        </div>
+
+        <div class="header_column menu_column">
+          <ul class="menu">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li>
+              <img class="separator" src="img/wave_small.png" alt="wave icon" />
+            </li>
+            <li>
+              <a href="">Каталог</a>
+            </li>
+            <li>
+              <img class="separator" src="img/wave_small.png" alt="wave icon" />
+            </li>
+            <li>
+              <a href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header_column">
+          Телефон: +7 123 456 7890 <br />
+          <input type="button" value="Заказать звонок" />
+        </div>
+      </div>
+
+      <div class="content">
+        <h1 class="catalog__header">
+          Каталог
+          <div class="catalog__cart_section">
+            <a href="cart.html" class="catalog__cart_link">
+              <span>Товаров в корзине:</span>
+              <span class="catalog__cart_counter">0</span>
+            </a>
+          </div>
+        </h1>
+
+        <div class="catalog_grid">
+          <div class="catalog_item">
+            <div class="item_row product__name">
+              <a href="catalog/supboard.html">
+                <b>SUP БОРД</b>
+              </a>
+            </div>
+            <div class="item_row">
+              <a href="catalog/supboard.html">
+                <img
+                  class="product__img"
+                  src="img/supboard-1.jpg"
+                  alt="SUP board"
+                  width="200"
+                  title="SUP БОРД STORMLINE PREMIUM 10.6"
+                />
+              </a>
+            </div>
+            <div class="item_row">
+              <div class="price product__price">31900</div>
+              <div class="currency">РУБ.</div>
+            </div>
+            <div class="item_row">
+              <input type="button" class="btn__buy" value="Купить" />
+            </div>
+          </div>
+
+          <div class="catalog_item">
+            <div class="item_row product__name">
+              <a href="catalog/waterskis.html">
+                <b>Водные лыжи</b>
+              </a>
+            </div>
+            <div class="item_row">
+              <a href="catalog/waterskis.html">
+                <img
+                  class="product__img"
+                  src="img/waterskis.jpg"
+                  alt="Водные лыжи"
+                  width="200"
+                  title="Комплект водные лыжи JOBE ALLEGRE COMBO SKIS PACKAGE"
+                />
+              </a>
+            </div>
+            <div class="item_row">
+              <div class="price product__price">26250</div>
+              <div class="currency">РУБ.</div>
+            </div>
+            <div class="item_row">
+              <input type="button" class="btn__buy" value="Купить" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer_column">
+          <ul class="footer_menu">
+            <li>
+              <a href="index.html">Главная</a>
+            </li>
+            <li>
+              <a href="catalog.html">Каталог</a>
+            </li>
+            <li>
+              <a href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer_column footer_address">
+          ул. Брусницына, 8А, Березовский, Свердловская обл., 623701
+          <br />
+          Телефон: +7 123 456 7890
+          <br />
+          E-mail:
+          <a href="mailto:waterworld@ggmaill.com">waterworld@ggmaill.com</a>
+        </div>
+
+        <div class="footer_column">
+          <p class="copyright">&copy; Все права защищены</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script/product.js"></script>
+  <script src="script/cart.js"></script>
+  <script src="script/catalog.js"></script>
+</html>
