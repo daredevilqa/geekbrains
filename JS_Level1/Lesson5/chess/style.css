@@ -1,0 +1,32 @@
+.field__container {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.row {
+  height: 80px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cell {
+  height: 80px;
+  width: 80px;
+  outline: 1px solid black;
+  float: left;
+  display: flex;
+}
+
+.num__letter__cell {
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.black {
+  background-color: black;
+}
