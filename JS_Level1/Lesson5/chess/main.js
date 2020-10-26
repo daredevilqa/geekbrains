@@ -37,7 +37,7 @@ function generateChessField() {
         continue;
       }
 
-      if ((i % 2 > 0 && j % 2 > 0) || (i % 2 === 0 && j % 2 === 0)) {
+      if (i % 2 === j % 2) {
         cell.classList.add("black");
       }
       row.appendChild(cell);
