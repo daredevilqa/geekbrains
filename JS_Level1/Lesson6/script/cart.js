@@ -33,6 +33,10 @@ class Cart {
     return this._items.reduce((sum, cur) => sum + cur.getOverallPrice(), 0);
   }
 
+  getTotalCountOfProducts() {
+    return this._items.reduce((sum, cur) => sum + cur._quantity, 0);
+  }
+
   render(insertIntoCss = ".content") {
     this._items.forEach((prod) => {
       const outerProductDiv = document.createElement("div");
