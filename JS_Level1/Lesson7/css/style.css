@@ -1,0 +1,469 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans.ttf);
+}
+
+.clearfix {
+  clear: both;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  /*        background-image: linear-gradient(to bottom, whitesmoke, dodgerblue, rgb(100, 200, 150));*/
+  background-image: url(../img/back1.jpg);
+  background-size: cover;
+}
+
+.container {
+  background-color: #f8f8f8;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  min-height: 570px;
+}
+
+.center {
+  text-align: center;
+  margin: 10px;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to bottom, whitesmoke, 80%, lightskyblue);
+  border-bottom: 2px solid royalblue;
+}
+
+.header_column {
+  line-height: 100%;
+  text-align: center;
+  width: 30%;
+  float: left;
+}
+
+.menu_column {
+  width: 50%;
+}
+
+.header_column h4 {
+  margin: 0;
+  padding-left: 0;
+}
+
+.header_logo {
+  text-align: center;
+  float: left;
+  margin: 15px;
+}
+
+.menu {
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: royalblue;
+}
+
+.menu li a[href=""] {
+  border: 2px solid royalblue;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.menu li a[href=""]:hover {
+  color: royalblue;
+  cursor: default;
+}
+
+.menu li a:hover {
+  color: mediumvioletred;
+}
+
+a {
+  color: royalblue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: mediumvioletred;
+  font-weight: 600;
+}
+
+a[href*="mailto"] {
+  padding: 3px;
+}
+
+a.submenu {
+  background-color: royalblue;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  padding: 2px 1px 2px 5px;
+}
+
+a.submenu::after {
+  content: " >>";
+  padding: 5px;
+}
+
+a.submenu:hover {
+  background-color: whitesmoke;
+  color: mediumvioletred;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+a.catalog__cart_link {
+  color: whitesmoke;
+}
+
+a.catalog__cart_link:hover {
+  color: mediumvioletred;
+  background-color: whitesmoke;
+  padding: 3px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+p {
+  padding-left: 5px;
+}
+
+h1 {
+  text-align: center;
+  background-color: royalblue;
+  color: whitesmoke;
+  line-height: 50px;
+}
+
+h1.catalog__header {
+  position: relative;
+}
+
+.catalog__cart_section {
+  position: absolute;
+  right: 20px;
+  font-size: 0.6em;
+  font-weight: 400;
+  display: none;
+}
+
+h1.waterworld {
+  text-align: center;
+  color: royalblue;
+  background-color: transparent;
+  line-height: inherit;
+}
+
+h3 {
+  background-color: royalblue;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: center;
+  clear: both;
+}
+
+h4 {
+  padding-left: 10px;
+}
+
+img {
+  outline: 1px solid royalblue;
+}
+
+.product__img {
+  outline: 1px solid royalblue;
+  float: left;
+  margin: 0 10px 10px 10px;
+}
+
+.product__img:hover {
+  outline: none;
+}
+
+img.logo {
+  height: 80px;
+  outline: none;
+}
+
+img.separator {
+  outline: none;
+  vertical-align: text-bottom;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.catalog_item {
+  float: left;
+  margin: 10px;
+}
+
+.item_row {
+  text-align: center;
+  padding: 5px;
+}
+
+.cart__item_props {
+  color: #484343;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.cart__total {
+  color: royalblue;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Текст краткого описания товара */
+.short_description {
+  color: #707070;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 24px;
+}
+
+.short_description::first-letter {
+  font-size: 18px;
+  font-family: cursive;
+  color: royalblue;
+}
+
+/* Текст подробного описания товара */
+.detailed_description {
+  color: #484343;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.detailed_description::first-letter {
+  font-size: 20px;
+  font-family: cursive;
+  color: royalblue;
+}
+
+/* Характеристики товара */
+.features {
+  list-style-image: url(../img/checkmark_small.png);
+  list-style-position: inside;
+  line-height: 40px;
+  font-style: oblique;
+  text-align: left;
+}
+
+.price {
+  color: royalblue;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+.currency {
+  color: royalblue;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+table td {
+  padding: 10px;
+}
+
+table.specification {
+  border-collapse: collapse;
+}
+
+table.specification tr:first-of-type {
+  line-height: 40px;
+}
+
+table.specification td {
+  border: 1px solid royalblue;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+td.table_header {
+  background-color: royalblue;
+  color: whitesmoke;
+}
+
+.address_info {
+  padding: 10px;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 22px;
+  color: royalblue;
+  font-size: 16px;
+  font-family: monospace;
+  margin: 5px;
+}
+
+input[type="text"]:focus {
+  color: whitesmoke;
+  background-color: dodgerblue;
+  text-transform: capitalize;
+}
+
+input[type="text"]:focus::placeholder {
+  color: whitesmoke;
+}
+
+input[type="button"],
+input[type="submit"] {
+  font-size: 18px;
+  border: 2px solid royalblue;
+  border-radius: 5px;
+  color: royalblue;
+  cursor: pointer;
+  margin: 10px;
+  padding: 5px;
+}
+
+input[type="button"].btn__buy {
+  font-size: 24px;
+  padding: 5px 30px;
+}
+
+input[type="button"].btn__buy:hover {
+  color: mediumvioletred;
+  border: 2px solid mediumvioletred;
+}
+
+input[type="button"].btn__buy:active {
+  background-color: mediumvioletred;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
+}
+
+input[type="reset"] {
+  font-size: 18px;
+  border: 2px solid mediumvioletred;
+  border-radius: 5px;
+  color: mediumvioletred;
+  cursor: pointer;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"]:active {
+  outline: none;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"]:focus {
+  outline: none;
+}
+
+textarea {
+  color: royalblue;
+  font-size: 18px;
+  font-family: monospace;
+}
+
+textarea:focus {
+  color: whitesmoke;
+  background-color: dodgerblue;
+}
+
+fieldset {
+  border-color: dodgerblue;
+  border-width: 2px;
+  border-radius: 7px;
+  margin: 15px;
+}
+
+select {
+  font-size: 16px;
+}
+
+.map {
+  width: 100%;
+  height: 374px;
+  border-color: dodgerblue;
+  border-width: 2px;
+  border-radius: 7px;
+}
+
+/* футер без указанной высоты ведет себя лучше на мелких экранах */
+.footer {
+  background-image: linear-gradient(to bottom, dodgerblue, darkblue);
+  color: whitesmoke;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+.footer_column {
+  width: 33%;
+  margin: auto;
+  display: inline-block;
+  padding: 10px;
+}
+
+.footer_column a {
+  color: whitesmoke;
+}
+
+.footer_column a:hover {
+  color: mediumvioletred;
+  background-color: whitesmoke;
+  padding: 3px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.footer_menu {
+  list-style-type: none;
+  font-size: 14px;
+  font-variant: small-caps;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.footer_menu li {
+  margin: 10px;
+}
+
+.footer_address {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.copyright {
+  font-size: 12px;
+}
