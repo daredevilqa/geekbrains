@@ -1,0 +1,14 @@
+[
+  {
+    "_name": "SUP Board",
+    "_price": 31900,
+    "_imgUrl": "img/supboard-1.jpg",
+    "_productPageUrl": "catalog/supboard.html"
+  },
+  {
+    "_name": "Водные лыжи JOBE ALLEGRE",
+    "_price": 26250,
+    "_imgUrl": "img/waterskis.jpg",
+    "_productPageUrl": "catalog/waterskis.html"
+  }
+]

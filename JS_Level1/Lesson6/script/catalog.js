@@ -2,73 +2,72 @@ class Catalog extends Cart {
   getItemsPerCategory(category) {
     return this._items.filter((item) => item.category === category);
   }
+
+  render() {
+    this.items.forEach((prod) => {
+      prod.render();
+    });
+
+    if (actualCart.items.length === 0) {
+      catalogCartSection.style.display = "none";
+    } else {
+      catalogCartSection.style.display = "inline-block";
+      catalogCartCounter.innerText = actualCart.getTotalCountOfProducts();
+    }
+  }
 }
-
-const cart = new Cart();
-const catalog = new Catalog();
-
-const catalogGrid = document.querySelector(".catalog_grid");
-const itemsNodes = catalogGrid.querySelectorAll(".catalog_item");
 
 /**
- * Initializes catalog array filling it out with the products presented on the page
- * @param {NodeListOf<HTMLDivElement>} nodesList
+ * @type HTMLDivElement
  */
-function initCatalog(nodesList) {
-  nodesList.forEach((node) => {
-    const name = node.querySelector(".product__name");
-    const price = node.querySelector(".product__price");
-    const img = node.querySelector(".product__img");
-    /**
-     * @type HTMLButtonElement
-     */
-    const buyBtn = node.querySelector(".btn__buy");
+const catalogCartSection = document.querySelector(".catalog__cart_section");
+/**
+ * @type HTMLSpanElement
+ */
+const catalogCartCounter = catalogCartSection.querySelector(
+  ".catalog__cart_counter"
+);
 
-    const product = new Product(name.textContent.trim(), price.textContent);
-    product.imgUrl = img.getAttribute("src");
+const catalog = new Catalog(
+  new Product(
+    "SUP Board",
+    31900,
+    "img/supboard-1.jpg",
+    "catalog/supboard.html"
+  ),
+  new Product(
+    "Water skis",
+    26250,
+    "img/waterskis.jpg",
+    "catalog/waterskis.html"
+  )
+);
 
-    catalog.addItem(product);
-
-    buyBtn.addEventListener("click", () => addToCart(product));
-  });
-}
+catalog.render();
+console.log(catalog);
 
 /**
  * Adds items to the Cart once Buy button is clicked and logs the action
  * @param {Product} prod
  */
 function addToCart(prod) {
-  /**
-   * @type HTMLDivElement
-   */
-  const catalogCartSection = document.querySelector(".catalog__cart_section");
-  /**
-   * @type HTMLSpanElement
-   */
-  const catalogCartCounter = catalogCartSection.querySelector(
-    ".catalog__cart_counter"
-  );
-  const existingItem = cart.getItem(prod.name);
+  const existingItem = actualCart.getItem(prod.name);
 
-  if (cart.items.length === 0) {
+  if (actualCart.items.length === 0) {
     catalogCartSection.style.display = "inline-block";
   }
 
   if (existingItem) {
     existingItem.quantity += 1;
   } else {
-    cart.addItem(prod);
+    actualCart.addItem(prod);
   }
 
-  let currentCount = Number(catalogCartCounter.innerText);
-  catalogCartCounter.innerText = ++currentCount;
+  catalogCartCounter.innerText = actualCart.getTotalCountOfProducts();
 
   console.log("Added to Cart:", prod);
-  console.log("Cart now:", cart);
-  console.log("Cart's TOTAL is:", cart.getTotal());
+  console.log("Cart now:", actualCart);
+  console.log("Cart's TOTAL is:", actualCart.getTotal());
 
-  localStorage.setItem("cart", JSON.stringify(cart));
+  sessionStorage.setItem("cart", JSON.stringify(actualCart));
 }
-
-initCatalog(itemsNodes);
-console.log(catalog);
