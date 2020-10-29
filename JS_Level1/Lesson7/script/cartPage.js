@@ -10,3 +10,7 @@ proceedToCheckoutBtn.value = "Оформить покупку >>";
 
 proceedToCheckoutDiv.appendChild(proceedToCheckoutBtn);
 document.querySelector(".content").appendChild(proceedToCheckoutDiv);
+
+function handleQuantityIncrease() {}
+
+function handleQuantityDecrease() {}

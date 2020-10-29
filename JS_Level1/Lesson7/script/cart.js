@@ -45,21 +45,40 @@ class Cart {
       const productImg = document.createElement("img");
       productImg.classList.add("product__img");
       productImg.setAttribute("width", "200");
+      productImg.src = prod.imgUrl;
 
       const productNameDiv = document.createElement("div");
       productNameDiv.classList.add("cart__item_props", "product__name");
+      productNameDiv.innerText = prod.name;
 
       const productPriceDiv = document.createElement("div");
       productPriceDiv.classList.add("cart__item_props", "product__price");
+      productPriceDiv.innerText = `Цена: ${prod.price}`;
 
       const productQuantityDiv = document.createElement("div");
       productQuantityDiv.classList.add("cart__item_props", "product__quantity");
+
+      const quantitySpan = document.createElement("span");
+      quantitySpan.innerText = `Количество: ${prod.quantity}`;
+      const plusBtn = document.createElement("input");
+      plusBtn.classList.add("btn__change_quantity");
+      plusBtn.setAttribute("type", "button");
+      plusBtn.setAttribute("value", "+");
+      plusBtn.addEventListener("click", () => handleQuantityIncrease());
+      const minusBtn = document.createElement("input");
+      minusBtn.classList.add("btn__change_quantity");
+      minusBtn.setAttribute("type", "button");
+      minusBtn.setAttribute("value", "-");
+      minusBtn.addEventListener("click", () => handleQuantityDecrease());
+
+      productQuantityDiv.append(quantitySpan, plusBtn, minusBtn);
 
       const productOverallPriceDiv = document.createElement("div");
       productOverallPriceDiv.classList.add(
         "cart__item_props",
         "product__overall_price"
       );
+      productOverallPriceDiv.innerText = `Сумма: ${prod.getOverallPrice()}`;
 
       outerProductDiv.append(
         productImg,
@@ -68,12 +87,6 @@ class Cart {
         productQuantityDiv,
         productOverallPriceDiv
       );
-
-      productImg.src = prod.imgUrl;
-      productNameDiv.innerText = prod.name;
-      productPriceDiv.innerText = `Цена: ${prod.price}`;
-      productQuantityDiv.innerText = `Количество: ${prod.quantity}`;
-      productOverallPriceDiv.innerText = `Сумма: ${prod.getOverallPrice()}`;
 
       document.querySelector(insertIntoCss).appendChild(outerProductDiv);
     });
