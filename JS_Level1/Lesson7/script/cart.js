@@ -64,12 +64,16 @@ class Cart {
       plusBtn.classList.add("btn__change_quantity");
       plusBtn.setAttribute("type", "button");
       plusBtn.setAttribute("value", "+");
-      plusBtn.addEventListener("click", () => handleQuantityIncrease());
+      plusBtn.addEventListener("click", () =>
+        handleQuantityChange(prod, "increase")
+      );
       const minusBtn = document.createElement("input");
       minusBtn.classList.add("btn__change_quantity");
       minusBtn.setAttribute("type", "button");
       minusBtn.setAttribute("value", "-");
-      minusBtn.addEventListener("click", () => handleQuantityDecrease());
+      minusBtn.addEventListener("click", () =>
+        handleQuantityChange(prod, "decrease")
+      );
 
       productQuantityDiv.append(quantitySpan, plusBtn, minusBtn);
 
@@ -95,7 +99,18 @@ class Cart {
     cartTotalDiv.classList.add("cart__total", "clearfix");
     cartTotalDiv.innerText = `Общая Сумма: ${this.getTotal()}`;
 
-    document.querySelector(insertIntoCss).appendChild(cartTotalDiv);
+    const proceedToCheckoutDiv = document.createElement("div");
+    proceedToCheckoutDiv.classList.add("center");
+
+    const proceedToCheckoutBtn = document.createElement("input");
+    proceedToCheckoutBtn.setAttribute("type", "button");
+    proceedToCheckoutBtn.classList.add("btn__buy", "center");
+    proceedToCheckoutBtn.value = "Оформить покупку >>";
+    proceedToCheckoutDiv.appendChild(proceedToCheckoutBtn);
+
+    document
+      .querySelector(insertIntoCss)
+      .append(cartTotalDiv, proceedToCheckoutDiv);
   }
 
   constructor(...items) {

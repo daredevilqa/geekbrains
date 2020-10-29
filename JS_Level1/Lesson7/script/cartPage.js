@@ -1,16 +1,27 @@
 actualCart.render();
 
-const proceedToCheckoutDiv = document.createElement("div");
-proceedToCheckoutDiv.classList.add("center");
+/**
+ * @param {Product} prod
+ * @param {string} action
+ */
+function handleQuantityChange(prod, action) {
+  const existingProduct = actualCart.getItem(prod.name);
 
-const proceedToCheckoutBtn = document.createElement("input");
-proceedToCheckoutBtn.setAttribute("type", "button");
-proceedToCheckoutBtn.classList.add("btn__buy", "center");
-proceedToCheckoutBtn.value = "Оформить покупку >>";
+  if (existingProduct) {
+    switch (action) {
+      case "increase":
+        existingProduct.quantity++;
+        break;
+      case "decrease":
+        existingProduct.quantity--;
 
-proceedToCheckoutDiv.appendChild(proceedToCheckoutBtn);
-document.querySelector(".content").appendChild(proceedToCheckoutDiv);
-
-function handleQuantityIncrease() {}
-
-function handleQuantityDecrease() {}
+        if (existingProduct.quantity === 0) {
+          actualCart.removeItem(prod);
+        }
+        break;
+    }
+    sessionStorage.setItem("cart", JSON.stringify(actualCart));
+    document.querySelector(".content").innerHTML = "<h1>Корзина</h1>";
+    actualCart.render();
+  }
+}

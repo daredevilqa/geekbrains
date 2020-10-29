@@ -229,6 +229,12 @@ img.separator {
   margin-left: 20px;
 }
 
+.product__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: royalblue;
+}
+
 .cart__total {
   color: royalblue;
   font-size: 20px;
@@ -354,7 +360,8 @@ input[type="submit"] {
 
 input[type="button"].btn__change_quantity {
   margin: 0 2px 0 7px;
-  padding: 3px;
+  padding: 0 5px;
+  min-width: 25px;
 }
 
 input[type="button"].btn__change_quantity:hover {
