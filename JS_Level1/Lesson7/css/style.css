@@ -229,6 +229,12 @@ img.separator {
   margin-left: 20px;
 }
 
+.product__name {
+  font-size: 18px;
+  font-weight: 600;
+  color: royalblue;
+}
+
 .cart__total {
   color: royalblue;
   font-size: 20px;
@@ -350,6 +356,23 @@ input[type="submit"] {
   cursor: pointer;
   margin: 10px;
   padding: 5px;
+}
+
+input[type="button"].btn__change_quantity {
+  margin: 0 2px 0 7px;
+  padding: 0 5px;
+  min-width: 25px;
+}
+
+input[type="button"].btn__change_quantity:hover {
+  color: mediumvioletred;
+  border: 2px solid mediumvioletred;
+}
+
+input[type="button"].btn__change_quantity:active {
+  background-color: mediumvioletred;
+  color: whitesmoke;
+  border: 2px solid whitesmoke;
 }
 
 input[type="button"].btn__buy {
