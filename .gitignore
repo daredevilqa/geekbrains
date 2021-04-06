@@ -1,2 +1,5 @@
 # VS Code settings folder
 .vscode/
+
+# JetBrains configs and system files/folders
+.idea/
