@@ -1,0 +1,61 @@
+@import "variables";
+
+@speech-cloud-bg: #EBEBEB;
+
+.reviews {
+  .base-padding();
+  background-color: @section-bg-grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &-title {
+    .section-title();
+  }
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  width: 575px;
+  margin-bottom: 24px;
+
+  &-photo {
+    display: block;
+    width: 75px;
+    height: 75px;
+    background-color: @bg-color;
+    border-radius: 50%;
+  }
+
+  &-txt {
+    width: 478px;
+    margin: 0 0 0 22px;
+    padding: 16px;
+    background-color: @speech-cloud-bg;
+    color: @txt-color-grey;
+    border-radius: 10px;
+    position: relative;
+    font-size: 14px;
+    font-style: italic;
+    .box-size();
+
+    &:before {
+      content: "";
+      display: block;
+      border: 13px solid transparent;
+      border-right: 13px solid @speech-cloud-bg;
+      position: absolute;
+      top: 26px;
+      left: -26px;
+    }
+
+    & > span {
+      display: block;
+      margin: 5px 0 0 0;
+      color: #989898;
+      font-size: 14px;
+      font-style: normal;
+    }
+  }
+}

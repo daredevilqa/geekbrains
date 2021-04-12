@@ -1,0 +1,50 @@
+@import "variables";
+
+.page-header {
+  width: 100%;
+  .base-padding();
+  background-color: @bg-color;
+  color: white;
+
+  &-wrp {
+    float: left;
+  }
+
+  &-title {
+    margin: 0 0 30px 0;
+  }
+
+  &-pic {
+    display: block;
+    width: 470px;
+    min-height: 100px;
+    background-color: white;
+    float: right;
+  }
+
+  &-list {
+    .no-margins();
+
+    &-item {
+      padding: 0 0 0 35px;
+      list-style-type: none;
+      position: relative;
+      font-size: @medium-font;
+      margin-bottom: 13px;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 19px;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        background-image: url('../img/check_icon.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

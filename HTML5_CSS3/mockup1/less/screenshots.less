@@ -1,0 +1,49 @@
+@import "variables";
+
+.screenshots {
+  .base-padding();
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &-title {
+    .section-title();
+  }
+
+  &-item {
+    width: 49%;
+    min-height: 100px;
+    margin: 0 0 29px 0;
+    display: flex;
+
+    &:nth-of-type(3), &:nth-of-type(4) {
+      .no-margins();
+    }
+
+    &-photo {
+      display: block;
+      width: 200px;
+      height: 150px;
+      margin: 0 15px 0 0;
+      background-color: @bg-color;
+    }
+
+    &-wrp {
+      width: 350px;
+    }
+
+    &-title {
+      margin: 0 0 15px 0;
+      color: @bg-color;
+      font-size: @small-font * 1.5;
+    }
+
+    &-txt {
+      margin: 0;
+      color: @txt-color-grey;
+      font-size: @small-font;
+    }
+  }
+}
