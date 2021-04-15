@@ -1,0 +1,80 @@
+@import "variables";
+
+.buy-it-now {
+  .base-padding();
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+
+  &-title {
+    .section-title(29px);
+  }
+
+  &-item {
+    .base-padding(0);
+    width: 300px;
+    min-height: 300px;
+    margin: 0 45px 0 0;
+    background-color: @bg-color;
+    color: white;
+    border: 2px solid @bg-color;
+    border-radius: 5px;
+
+    &:nth-of-type(3) {
+      margin: 0;
+    }
+
+    &-title {
+      display: block;
+      .base-padding(16px);
+      font-size: @small-font * 1.5;
+      color: white;
+      text-align: center;
+    }
+
+    &-price {
+      display: block;
+      .base-padding(18px);
+      font-size: @huge-font;
+      text-align: center;
+      line-height: 0.9;
+      background-color: white;
+      color: @bg-color;
+    }
+
+    &-list {
+      margin: 19px;
+      padding: 0;
+      list-style-position: inside;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &-btn {
+      display: block;
+      width: 261px;
+      line-height: 2em;
+      margin: 20px auto;
+      color: @bg-color;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 5px;
+
+      &:hover {
+        color: white;
+        background-color: @bg-color;
+      }
+
+      &:active {
+        background-color: slategrey;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

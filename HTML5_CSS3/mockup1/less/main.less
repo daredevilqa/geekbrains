@@ -1,0 +1,16 @@
+@import "variables";
+
+body {
+  margin: 0;
+  font-family: @font-family;
+}
+
+.container {
+  width: @width;
+  margin: 0 auto;
+  .box-size();
+}
+
+header:after, section:after {
+  .clearfix();
+}
