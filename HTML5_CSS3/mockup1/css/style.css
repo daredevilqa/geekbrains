@@ -188,7 +188,7 @@ section:after {
   font-size: 16px;
 }
 .reviews {
-  padding: 50px;
+  padding: 50px 50px 26px 50px;
   box-sizing: border-box;
   background-color: #f5f5f5;
   display: flex;
@@ -260,7 +260,7 @@ section:after {
   text-align: center;
 }
 .buy-it-now-item {
-  padding: 0;
+  padding: 0 0 15px 0;
   box-sizing: border-box;
   width: 300px;
   min-height: 300px;
@@ -285,6 +285,7 @@ section:after {
   display: block;
   padding: 18px;
   box-sizing: border-box;
+  margin: 0 0 20px 0;
   font-size: 40px;
   text-align: center;
   line-height: 0.9;
@@ -292,8 +293,9 @@ section:after {
   color: #445162;
 }
 .buy-it-now-item-list {
-  margin: 19px;
-  padding: 0;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
   list-style-position: inside;
   font-size: 14px;
   line-height: 22px;
@@ -302,7 +304,7 @@ section:after {
   display: block;
   width: 261px;
   line-height: 2em;
-  margin: 20px auto;
+  margin: 0 auto;
   color: #445162;
   font-size: 18px;
   font-weight: bold;
@@ -312,6 +314,7 @@ section:after {
 .buy-it-now-item-btn:hover {
   color: white;
   background-color: #445162;
+  cursor: pointer;
 }
 .buy-it-now-item-btn:active {
   background-color: slategrey;
