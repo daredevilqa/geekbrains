@@ -1,3 +1,4 @@
+@import "../css/fontello.css";
 body {
   margin: 0;
   font-family: arial, sans-serif;
@@ -188,7 +189,7 @@ section:after {
   font-size: 16px;
 }
 .reviews {
-  padding: 50px;
+  padding: 50px 50px 26px 50px;
   box-sizing: border-box;
   background-color: #f5f5f5;
   display: flex;
@@ -260,7 +261,7 @@ section:after {
   text-align: center;
 }
 .buy-it-now-item {
-  padding: 0;
+  padding: 0 0 15px 0;
   box-sizing: border-box;
   width: 300px;
   min-height: 300px;
@@ -285,6 +286,7 @@ section:after {
   display: block;
   padding: 18px;
   box-sizing: border-box;
+  margin: 0 0 20px 0;
   font-size: 40px;
   text-align: center;
   line-height: 0.9;
@@ -292,8 +294,9 @@ section:after {
   color: #445162;
 }
 .buy-it-now-item-list {
-  margin: 19px;
-  padding: 0;
+  padding: 0 0 0 20px;
+  box-sizing: border-box;
+  margin: 0 0 20px 0;
   list-style-position: inside;
   font-size: 14px;
   line-height: 22px;
@@ -302,7 +305,7 @@ section:after {
   display: block;
   width: 261px;
   line-height: 2em;
-  margin: 20px auto;
+  margin: 0 auto;
   color: #445162;
   font-size: 18px;
   font-weight: bold;
@@ -312,10 +315,159 @@ section:after {
 .buy-it-now-item-btn:hover {
   color: white;
   background-color: #445162;
+  cursor: pointer;
 }
 .buy-it-now-item-btn:active {
   background-color: slategrey;
 }
 .buy-it-now-item-btn:focus {
   outline: none;
+}
+.footer {
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background-color: #445162;
+}
+.footer-title {
+  display: block;
+  width: 100%;
+  margin: 0 0 30px 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+}
+.footer-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 500px;
+  margin: 0 45px 0 0;
+}
+.footer-form-input-name,
+.footer-form-input-email,
+.footer-form-textarea {
+  width: 100%;
+  height: 40px;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: white;
+  outline: none;
+  text-transform: capitalize;
+}
+.footer-form-input-name:hover,
+.footer-form-input-email:hover,
+.footer-form-textarea:hover {
+  background-color: gray;
+  color: white;
+  border-color: white;
+}
+.footer-form-input-name:hover::placeholder,
+.footer-form-input-email:hover::placeholder,
+.footer-form-textarea:hover::placeholder {
+  color: white;
+}
+.footer-form-textarea {
+  width: 500px;
+  height: 170px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: white;
+  outline: none;
+  font-family: inherit;
+  resize: none;
+}
+.footer-form input[placeholder],
+.footer-form textarea[placeholder] {
+  text-overflow: ellipsis;
+  color: #445162;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.footer-form-input-submit {
+  border-radius: 5px;
+  background-color: white;
+  width: 140px;
+  height: 40px;
+  text-transform: uppercase;
+  color: #445162;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  outline: none;
+}
+.footer-form-input-submit:hover {
+  background-color: #445162;
+  color: white;
+  cursor: pointer;
+}
+.footer-form-input-submit:active {
+  background-color: white;
+  color: #445162;
+}
+.footer-contacts {
+  width: 241px;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+.footer-contacts-link {
+  display: block;
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+.footer-contacts-link:last-of-type {
+  margin: 0 0 32px 0;
+}
+.footer-contacts-social {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.footer-contacts-social-link {
+  display: block;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+  text-decoration: none;
+  color: #445162;
+  position: relative;
+}
+.footer-contacts-social-link i {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+.footer-contacts-social-link:hover {
+  color: white;
+  background-color: #445162;
+}
+.copyright {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #445162;
+  text-align: center;
+  font-size: 12px;
+}
+.copyright p {
+  margin: 0 auto;
 }

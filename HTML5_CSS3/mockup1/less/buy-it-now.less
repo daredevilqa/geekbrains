@@ -13,7 +13,7 @@
   }
 
   &-item {
-    .base-padding(0);
+    .base-padding(0 0 15px 0);
     width: 300px;
     min-height: 300px;
     margin: 0 45px 0 0;
@@ -37,6 +37,7 @@
     &-price {
       display: block;
       .base-padding(18px);
+      margin: 0 0 20px 0;
       font-size: @huge-font;
       text-align: center;
       line-height: 0.9;
@@ -45,8 +46,8 @@
     }
 
     &-list {
-      margin: 19px;
-      padding: 0;
+      .base-padding(0 0 0 20px);
+      margin: 0 0 20px 0;
       list-style-position: inside;
       font-size: 14px;
       line-height: 22px;
@@ -56,7 +57,7 @@
       display: block;
       width: 261px;
       line-height: 2em;
-      margin: 20px auto;
+      margin: 0 auto;
       color: @bg-color;
       font-size: 18px;
       font-weight: bold;
@@ -66,6 +67,7 @@
       &:hover {
         color: white;
         background-color: @bg-color;
+        cursor: pointer;
       }
 
       &:active {
