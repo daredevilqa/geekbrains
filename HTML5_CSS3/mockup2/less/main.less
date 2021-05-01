@@ -2,12 +2,19 @@
 
 body {
   margin: 0;
-  font-family: @font-family;
+  font-family: @font-headings;
 }
 
 .container {
   width: @width;
   margin: 0 auto;
+  .box-size();
+}
+
+.grid {
+  width: 1230px;
+  margin: 0 auto;
+  .base-padding(40px 30px);
   .box-size();
 }
 
