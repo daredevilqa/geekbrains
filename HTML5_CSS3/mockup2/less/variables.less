@@ -1,0 +1,38 @@
+@width: 1280px;
+@bg-color: #445162;
+@section-bg-grey: #F5F5F5;
+@txt-color-grey: #333333;
+@font-family: arial, sans-serif;
+@huge-font: 40px;
+@big-font: 30px;
+@medium-font: @small-font * 1.25;
+@small-font: 16px;
+
+.box-size() {
+  box-sizing: border-box;
+}
+
+.base-padding(@padding: 50px) {
+  padding: @padding;
+  .box-size();
+}
+
+.no-margins() {
+  margin: 0;
+  padding: 0;
+}
+
+.section-title(@margin-bottom: 34px) {
+  width: 100%;
+  margin: 0 0 @margin-bottom 0;
+  font-size: @big-font;
+  color: @bg-color;
+  text-align: center;
+}
+
+.clearfix() {
+  content: "";
+  display: block;
+  width: 100%;
+  clear: both;
+}
