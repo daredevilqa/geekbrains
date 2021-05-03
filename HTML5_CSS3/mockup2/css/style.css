@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  font-family: Raleway, arial, sans-serif;
+  font-family: 'raleway', arial, sans-serif;
 }
 .container {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -47,7 +48,7 @@ section:after {
   fill: currentColor;
 }
 .header-nav-logo-txt {
-  font-family: Raleway, arial, sans-serif;
+  font-family: 'raleway', arial, sans-serif;
   font-size: 34px;
   font-weight: 400;
   text-align: right;
@@ -76,7 +77,7 @@ section:after {
 }
 .header-nav-menu-item {
   font-size: 14px;
-  font-family: Montserrat, verdana, sans-serif;
+  font-family: 'montserrat', verdana, sans-serif;
   line-height: 1.2;
   font-weight: 300;
   margin-right: 30px;
@@ -134,7 +135,7 @@ section:after {
   left: 30px;
   top: -3px;
   font-size: 16px;
-  font-family: Montserrat, verdana, sans-serif;
+  font-family: 'montserrat', verdana, sans-serif;
   padding: 5px;
 }
 .header-nav-search-input:focus {
@@ -165,7 +166,7 @@ section:after {
   text-align: center;
 }
 .header-slogan-txt {
-  font-family: Montserrat, verdana, sans-serif;
+  font-family: 'montserrat', verdana, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
@@ -186,6 +187,7 @@ section:after {
   border-radius: 3px;
   text-decoration: none;
   text-align: center;
+  word-break: break-all;
   box-sizing: border-box;
 }
 .header-get-started-btn:hover {
@@ -197,7 +199,7 @@ section:after {
   color: #c7b299;
 }
 .header-get-started-btn-txt {
-  font-family: Raleway, arial, sans-serif;
+  font-family: 'raleway', arial, sans-serif;
   font-size: 14px;
   line-height: 23px;
   font-weight: 800;
