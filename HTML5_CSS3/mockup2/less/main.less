@@ -1,5 +1,10 @@
 @import "variables";
 
+//@font-face {
+//  font-family: raleway;
+//  src: url("");
+//}
+
 body {
   margin: 0;
   font-family: @font-headings;
@@ -7,18 +12,10 @@ body {
 
 .container {
   max-width: @width;
-  width: 100%;
   margin: 0 auto;
   .box-size();
 }
 
 .grid {
-  width: 1230px;
-  margin: 0 auto;
-  .base-padding(40px 30px);
-  .box-size();
-}
-
-header:after, section:after {
-  .clearfix();
+  .grid();
 }
