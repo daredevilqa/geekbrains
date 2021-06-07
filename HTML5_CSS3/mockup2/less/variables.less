@@ -3,6 +3,7 @@
 @bg-dark-color: #f4f5f8;
 @grey-color: #555555;
 @hover-color: #c7b299;
+@paragraph-txt-color: #8c8c8c;
 @font-headings: 'raleway', arial, sans-serif;
 @font-txt: 'montserrat', verdana, sans-serif;
 @biggest-font: 52px;
@@ -18,6 +19,12 @@
 .base-padding(@padding: 40px 30px) {
   padding: @padding;
   .box-size();
+}
+
+.grid(@padding: 40px 30px) {
+  width: 1230px;
+  margin: 0 auto;
+  .base-padding(@padding);
 }
 
 .no-margins() {
